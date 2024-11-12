@@ -458,8 +458,8 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  return NaN;
+function getFloatOnString(str) {
+  return global.parseFloat(str);
 }
 
 /**
@@ -476,8 +476,8 @@ function getFloatOnString(/* str */) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
+function getIntegerOnString(str, base) {
+  return global.parseInt(str, base);
 }
 
 /**
